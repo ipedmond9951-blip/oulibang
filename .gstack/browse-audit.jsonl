@@ -1,0 +1,16 @@
+{"ts":"2026-05-11T14:36:00.960Z","cmd":"goto","args":"file:///Users/zhangming/Projects/website-cloner/output/chinatianmai/index.html","origin":"file:///Users/zhangming/Projects/website-cloner/output/chinatianmai/index.html","durationMs":1939,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T14:36:04.319Z","cmd":"screenshot","args":"/tmp/final-check.png","origin":"file:///Users/zhangming/Projects/website-cloner/output/chinatianmai/index.html","durationMs":280,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T14:36:24.560Z","cmd":"goto","args":"http://localhost:8889/","origin":"http://localhost:8889/","durationMs":145,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T14:36:27.849Z","cmd":"screenshot","args":"/tmp/server-check.png","origin":"http://localhost:8889/","durationMs":243,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T14:36:50.321Z","cmd":"scroll","args":"","origin":"http://localhost:8889/","durationMs":2,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T14:36:51.607Z","cmd":"screenshot","args":"/tmp/scroll-check.png","origin":"http://localhost:8889/","durationMs":242,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T14:37:11.646Z","cmd":"reload","args":"","origin":"http://localhost:8889/","durationMs":59,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T14:37:14.989Z","cmd":"screenshot","args":"/tmp/hero-check.png","origin":"http://localhost:8889/","durationMs":285,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T14:37:39.938Z","cmd":"goto","args":"http://localhost:8889/images/about-section.webp","origin":"http://localhost:8889/images/about-section.webp","durationMs":18,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T14:37:42.117Z","cmd":"screenshot","args":"/tmp/about-img.png","origin":"http://localhost:8889/images/about-section.webp","durationMs":60,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T14:38:01.404Z","cmd":"goto","args":"http://localhost:8889/images/product-section.webp","origin":"http://localhost:8889/images/product-section.webp","durationMs":16,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T14:38:03.503Z","cmd":"screenshot","args":"/tmp/product-img.png","origin":"http://localhost:8889/images/product-section.webp","durationMs":51,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T14:38:03.547Z","cmd":"goto","args":"http://localhost:8889/images/news-section.jpg","origin":"http://localhost:8889/images/news-section.jpg","durationMs":5,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T14:38:05.630Z","cmd":"screenshot","args":"/tmp/news-img.png","origin":"http://localhost:8889/images/news-section.jpg","durationMs":35,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T14:38:30.333Z","cmd":"goto","args":"http://localhost:8889/","origin":"http://localhost:8889/","durationMs":19,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T14:38:30.469Z","cmd":"snapshot","args":"-D","origin":"http://localhost:8889/","durationMs":24,"status":"ok","hasCookies":false,"mode":"launched"}

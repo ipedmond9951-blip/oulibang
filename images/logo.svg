@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f"/>
+      <stop offset="100%" style="stop-color:#2d5a87"/>
+    </linearGradient>
+  </defs>
+  <rect width="60" height="60" rx="8" fill="url(#logoGrad)"/>
+  <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="10" font-weight="bold" font-family="Arial">OULIBANG</text>
+  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="6" font-family="Arial">NEW MATERIALS</text>
+  <text x="75" y="25" fill="#1e3a5f" font-size="16" font-weight="bold" font-family="Microsoft YaHei">欧利邦</text>
+  <text x="75" y="42" fill="#666" font-size="10" font-family="Microsoft YaHei">新材料</text>
+</svg>
