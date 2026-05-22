@@ -221,11 +221,20 @@
         </div>
     </nav>
 
-    <!-- Hero 横幅区 -->
-    <section id="home" class="hero-bg min-h-screen flex items-center pt-16 md:pt-20 relative overflow-hidden">
-        <!-- 全屏背景图 -->
+    <!-- Hero 横幅区 - 视频背景 -->
+    <section id="home" class="min-h-screen flex items-center pt-16 md:pt-20 relative overflow-hidden">
+        <!-- 全屏视频背景 -->
         <div class="absolute inset-0">
-            <img src="images/背景.png" alt="欧利邦工厂" class="w-full h-full object-cover">
+            <video 
+                autoplay 
+                muted 
+                loop 
+                playsinline 
+                class="w-full h-full object-cover"
+                poster="images/背景.png"
+            >
+                <source src="videos/company_intro.mp4" type="video/mp4">
+            </video>
             <!-- 深色渐变遮罩确保文字可读 -->
             <div class="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-900/70 to-blue-900/50"></div>
         </div>
