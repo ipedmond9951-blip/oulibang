@@ -7,6 +7,14 @@
     <meta name="description" content="山东欧利邦新材料有限公司已通过ISO9001质量管理体系、ISO14001环境管理体系认证，产品符合国家和行业标准。">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        .back-btn {
+            padding: 8px;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        .back-btn:hover {
+            background: #f3f4f6;
+        }
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
         body { font-family: 'Noto Sans SC', sans-serif; }
     </style>
@@ -18,7 +26,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center">
-                    <a href="index.html"><img src="images/logo.png" alt="欧利邦新材料Logo" class="h-12 w-auto"></a>
+                    <a href="index.html" class="flex items-center">
+                        <svg class="w-8 h-8 text-blue-800 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                        <img src="images/logo.png" alt="欧利邦新材料Logo" class="h-12 w-auto">
+                    </a>
                     <span class="ml-3 text-xl font-bold text-gray-800 hidden sm:block">山东欧利邦新材料</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-6">
@@ -64,117 +77,81 @@
         </div>
     </section>
 
-    <!-- 认证证书展示 -->
+    <!-- 专利证书展示 -->
     <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">资质证书</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- 证书1 -->
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden card-hover">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="images/certificates-iso.jpg" alt="ISO9001质量管理体系认证" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                            <div class="p-4 text-white">
-                                <div class="text-sm opacity-90">认证证书</div>
-                                <div class="font-bold">ISO9001:2015</div>
-                            </div>
-                        </div>
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">专利证书</h2>
+            
+            <!-- 证书组1：专利登记簿副本 -->
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden mb-12">
+                <div class="p-6 border-b">
+                    <h3 class="text-xl font-bold text-gray-800">一种环氧树脂反应釜用搅拌组件 - 专利登记簿副本</h3>
+                    <p class="text-gray-500 text-sm mt-1">发明专利 · 专利登记簿副本</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-4 p-6">
+                    <div class="overflow-hidden">
+                        <img src="images/certificates/一种环氧树脂反应釜用搅拌组件 专利登记簿副本-1.jpg" alt="专利登记簿副本-1" class="w-full h-auto rounded-lg hover:shadow-lg transition-shadow cursor-pointer" onclick="openLightbox(this.src)">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">ISO9001质量管理体系认证</h3>
-                        <p class="text-gray-600 text-sm">质量管理体系标准，确保产品和服务质量稳定可靠</p>
+                    <div class="overflow-hidden">
+                        <img src="images/certificates/一种环氧树脂反应釜用搅拌组件 专利登记簿副本-2.jpg" alt="专利登记簿副本-2" class="w-full h-auto rounded-lg hover:shadow-lg transition-shadow cursor-pointer" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="overflow-hidden">
+                        <img src="images/certificates/一种环氧树脂反应釜用搅拌组件 专利登记簿副本-3.jpg" alt="专利登记簿副本-3" class="w-full h-auto rounded-lg hover:shadow-lg transition-shadow cursor-pointer" onclick="openLightbox(this.src)">
                     </div>
                 </div>
+            </div>
 
-                <!-- 证书2 -->
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden card-hover">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="images/certificates-lab.jpg" alt="ISO14001环境管理体系认证" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                            <div class="p-4 text-white">
-                                <div class="text-sm opacity-90">认证证书</div>
-                                <div class="font-bold">ISO14001:2015</div>
-                            </div>
-                        </div>
+            <!-- 证书组2：手续合格通知书 -->
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden mb-12">
+                <div class="p-6 border-b">
+                    <h3 class="text-xl font-bold text-gray-800">一种环氧树脂反应釜用搅拌组件 - 手续合格通知书（著录项目变更）</h3>
+                    <p class="text-gray-500 text-sm mt-1">著录项目变更 · 手续合格通知书</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4 p-6">
+                    <div class="overflow-hidden">
+                        <img src="images/certificates/一种环氧树脂反应釜用搅拌组件 手续合格通知书（著录项目变更）-1.jpg" alt="手续合格通知书-1" class="w-full h-auto rounded-lg hover:shadow-lg transition-shadow cursor-pointer" onclick="openLightbox(this.src)">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">ISO14001环境管理体系认证</h3>
-                        <p class="text-gray-600 text-sm">环境管理体系标准，践行绿色生产、可持续发展理念</p>
+                    <div class="overflow-hidden">
+                        <img src="images/certificates/一种环氧树脂反应釜用搅拌组件 手续合格通知书（著录项目变更）-2.jpg" alt="手续合格通知书-2" class="w-full h-auto rounded-lg hover:shadow-lg transition-shadow cursor-pointer" onclick="openLightbox(this.src)">
                     </div>
                 </div>
+            </div>
 
-                <!-- 证书3 -->
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden card-hover">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="images/news-lab-research.jpg" alt="高新技术企业证书" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                            <div class="p-4 text-white">
-                                <div class="text-sm opacity-90">资质认定</div>
-                                <div class="font-bold">国家高新技术企业</div>
-                            </div>
-                        </div>
+            <!-- 证书组3：法拉证书 -->
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                <div class="p-6 border-b">
+                    <h3 class="text-xl font-bold text-gray-800">法拉+一种环氧树脂反应釜用搅拌组件 - 证书</h3>
+                    <p class="text-gray-500 text-sm mt-1">产品认证 · 证书</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4 p-6">
+                    <div class="overflow-hidden">
+                        <img src="images/certificates/法拉+一种环氧树脂反应釜用搅拌组件+证书-1.jpg" alt="法拉证书-1" class="w-full h-auto rounded-lg hover:shadow-lg transition-shadow cursor-pointer" onclick="openLightbox(this.src)">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">高新技术企业证书</h3>
-                        <p class="text-gray-600 text-sm">国家级高新技术企业认定，研发实力获国家认可</p>
+                    <div class="overflow-hidden">
+                        <img src="images/certificates/法拉+一种环氧树脂反应釜用搅拌组件+证书-2.jpg" alt="法拉证书-2" class="w-full h-auto rounded-lg hover:shadow-lg transition-shadow cursor-pointer" onclick="openLightbox(this.src)">
                     </div>
                 </div>
-
-                <!-- 证书4 -->
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden card-hover">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="images/news_factory.jpg" alt="清洁生产企业认证" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                            <div class="p-4 text-white">
-                                <div class="text-sm opacity-90">环保认证</div>
-                                <div class="font-bold">清洁生产认证</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">清洁生产企业认证</h3>
-                        <p class="text-gray-600 text-sm">山东省清洁生产审核验收达标企业，环保合规经营</p>
-                    </div>
-                </div>
-
-                <!-- 证书5 -->
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden card-hover">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="images/news-exhibition.jpg" alt="产品专利证书" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                            <div class="p-4 text-white">
-                                <div class="text-sm opacity-90">专利证书</div>
-                                <div class="font-bold">发明专利</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">产品发明专利证书</h3>
-                        <p class="text-gray-600 text-sm">多项环氧树脂产品制备工艺发明专利，技术创新受保护</p>
-                    </div>
-                </div>
-
-                <!-- 证书6 -->
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden card-hover">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="images/news-factory-production.jpg" alt="安全生产标准化" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                            <div class="p-4 text-white">
-                                <div class="text-sm opacity-90">安全认证</div>
-                                <div class="font-bold">安全生产标准化</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">安全生产标准化企业</h3>
-                        <p class="text-gray-600 text-sm">达到安全生产标准化三级企业要求，生产安全有保障</p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
+
+    <!-- 图片灯箱 -->
+    <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden flex items-center justify-center" onclick="closeLightbox()">
+        <button class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300">&times;</button>
+        <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full">
+    </div>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
 
     <!-- 质量方针 -->
     <section class="py-16 bg-white">
@@ -247,6 +224,14 @@
     </footer>
 
     <style>
+        .back-btn {
+            padding: 8px;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        .back-btn:hover {
+            background: #f3f4f6;
+        }
         .card-hover {
             transition: all 0.3s ease;
         }
