@@ -11,6 +11,14 @@
         body { font-family: 'Noto Sans SC', sans-serif; }
         .gallery-item:hover img { transform: scale(1.1); }
         .gallery-item:hover .overlay { opacity: 1; }
+    
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
