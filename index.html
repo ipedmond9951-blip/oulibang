@@ -166,7 +166,7 @@
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-white md:bg-gray-50">
     <!-- 导航栏 -->
     <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -263,26 +263,21 @@
         </div>
     </nav>
 
-    <!-- ========== 移动端固定视频区域 ========== -->
-    <!-- 移动端：视频固定在顶部（导航栏下方），滚动时始终可见 -->
-    <div class="md:hidden">
-        <!-- 视频区域：固定在顶部下方，16:9比例，始终可见 -->
-        <div class="fixed top-20 left-0 w-full z-40 bg-black">
-            <div class="relative w-full" style="padding-bottom: 56.25%;">
-                <video 
-                    autoplay 
-                    muted 
-                    loop 
-                    playsinline 
-                    class="absolute top-0 left-0 w-full h-full object-cover"
-                    style="width: 100vw;"
-                >
-                    <source src="videos/company_intro.mp4" type="video/mp4">
-                </video>
-            </div>
+    <!-- ========== 移动端视频区域 ========== -->
+    <!-- 移动端：视频直接放在页面流中，16:9宽度自适应，白色背景 -->
+    <div class="md:hidden bg-white">
+        <div class="w-full relative" style="padding-bottom: 56.25%;">
+            <video 
+                autoplay 
+                muted 
+                loop 
+                playsinline 
+                class="w-full h-full object-cover"
+                style="position: absolute; top: 0; left: 0;"
+            >
+                <source src="videos/company_intro.mp4" type="video/mp4">
+            </video>
         </div>
-        <!-- 占位块：导航栏(h-20=5rem) + 视频高度(56.25vw) -->
-        <div style="padding-top: calc(5rem + 56.25vw);"></div>
     </div>
 
     <!-- ========== 桌面端全屏视频区域 ========== -->
