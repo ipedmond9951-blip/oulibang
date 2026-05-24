@@ -168,7 +168,7 @@
 </head>
 <body class="bg-gray-50">
     <!-- 导航栏 -->
-    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+    <nav class="fixed top-0 left-0 right-0 md:bg-white bg-black/70 backdrop-blur-md shadow-md z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
@@ -179,7 +179,7 @@
 
                 <!-- 桌面端菜单 -->
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-900 font-medium">首页</a>
+                    <a href="index.html" class="nav-link text-white md:text-gray-700 hover:text-blue-900 font-medium">首页</a>
                     <a href="index.html#video" class="nav-link text-gray-700 hover:text-blue-900 font-medium">视频展示</a>
 
                     <!-- 关于我们 下拉菜单 -->
@@ -216,7 +216,7 @@
                 </div>
 
                 <!-- 移动端菜单按钮 -->
-                <button id="menuBtn" class="md:hidden p-2">
+                <button id="menuBtn" class="md:hidden p-2 text-white">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -264,10 +264,13 @@
     </nav>
 
     <!-- ========== 移动端固定视频区域 ========== -->
-    <!-- 移动端：视频固定在顶部，滚动时始终可见 -->
+    <!-- 移动端：视频固定在顶部，滚动时始终可见，跟导航栏重叠 -->
     <div class="md:hidden">
-        <!-- 视频区域：固定16:9比例 -->
-        <div class="fixed top-0 left-0 w-full z-50 bg-black">
+        <!-- 视频区域：固定在顶部，z-45在导航栏(z-50)下方，让导航栏始终在最上 -->
+        <div class="fixed top-0 left-0 w-full z-45 bg-black">
+            <!-- 导航栏占位（和视频重叠，导航栏z-50在上方） -->
+            <div class="h-20"></div>
+            <!-- 视频：16:9比例 -->
             <div class="relative w-full" style="padding-bottom: 56.25%;">
                 <video 
                     autoplay 
@@ -278,26 +281,12 @@
                 >
                     <source src="videos/company_intro.mp4" type="video/mp4">
                 </video>
-                <!-- 遮罩层，让文字更清晰 -->
-                <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/50 pointer-events-none"></div>
-            </div>
-            <!-- 文字叠加层 -->
-            <div class="absolute bottom-0 left-0 right-0 px-4 pb-4 bg-gradient-to-t from-black/80 to-transparent pt-16">
-                <h1 class="text-lg font-bold text-white leading-snug mb-1">环氧树脂一站式供应商</h1>
-                <p class="text-white/80 text-xs mb-3">年产能2万吨 | 出口20+国家</p>
-                <div class="flex gap-2">
-                    <a href="#products" class="bg-blue-600 text-white px-4 py-1.5 rounded-lg font-bold text-xs flex items-center gap-1">
-                        浏览产品
-                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </a>
-                    <a href="#contact" class="bg-white/20 text-white border border-white/30 px-4 py-1.5 rounded-lg font-bold text-xs backdrop-blur-sm">
-                        获取报价
-                    </a>
-                </div>
+                <!-- 遮罩层 -->
+                <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50 pointer-events-none"></div>
             </div>
         </div>
-        <!-- 占位块：给底部内容留出空间，不被视频遮挡 -->
-        <div style="padding-top: 56.25vw;"></div>
+        <!-- 占位块：导航栏高度 + 视频高度 -->
+        <div style="padding-top: calc(20rem + 56.25vw);"></div>
     </div>
 
     <!-- ========== 桌面端全屏视频区域 ========== -->
