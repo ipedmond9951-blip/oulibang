@@ -262,11 +262,12 @@
         </div>
     </nav>
 
-    <!-- ========== 移动端固定视频区域 ========== -->
-    <!-- 移动端：视频+导航栏固定，滚动时始终可见 -->
+    <!-- ========== 移动端固定视频+文字区域 ========== -->
+    <!-- 移动端：视频和文字一起固定在导航栏下方，滚动时始终可见 -->
     <div class="md:hidden">
-        <!-- 视频：固定在导航栏下方，z-40 -->
+        <!-- 视频+文字区域：固定在导航栏下方，z-40 -->
         <div class="fixed top-20 left-0 w-full z-40">
+            <!-- 视频层 -->
             <div class="relative w-full" style="padding-bottom: 56.25%;">
                 <video preload="metadata" 
                     autoplay 
@@ -278,7 +279,28 @@
                     <source src="videos/company_intro.mp4" type="video/mp4">
                 </video>
             </div>
+            <!-- 文字叠加层 -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center px-4 bg-black/30">
+                <h1 class="text-white text-lg font-bold text-center leading-relaxed mb-3">
+                    集研发、生产、经营于一体的环氧树脂一站式供应商
+                </h1>
+                <p class="text-white/90 text-sm text-center mb-4 max-w-xl">
+                    年产能2万吨，为涂料、防腐、复合材料、电子绝缘行业提供高品质树脂原料
+                </p>
+                <div class="flex gap-6">
+                    <div class="text-center">
+                        <div class="text-2xl font-black text-white">2<span class="text-blue-400">万<span class="text-sm">吨</span></span></div>
+                        <div class="text-white/60 text-xs">年产能</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-black text-white">20<span class="text-blue-400">+</span></div>
+                        <div class="text-white/60 text-xs">出口国家</div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- 占位：导航栏(5rem) + 视频高度(56.25vw) -->
+        <div style="padding-top: calc(5rem + 56.25vw);"></div>
     </div>
 
     <!-- ========== 桌面端全屏视频区域 ========== -->
