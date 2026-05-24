@@ -2,6 +2,8 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>山东欧利邦新材料有限公司 - 环氧树脂</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -12,12 +14,9 @@
         }
         .hero-bg {
             background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 50%, #1e3a5f 100%);
-            background-size: 200% 200%;
-            animation: gradientShift 15s ease infinite;
+            background-size: 100% 100%;
         }
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+        
             100% { background-position: 0% 50%; }
         }
         .gradient-text {
@@ -269,7 +268,7 @@
         <!-- 视频：固定在导航栏下方，z-40 -->
         <div class="fixed top-20 left-0 w-full z-40">
             <div class="relative w-full" style="padding-bottom: 56.25%;">
-                <video 
+                <video preload="metadata" 
                     autoplay 
                     muted 
                     loop 
@@ -286,7 +285,7 @@
     <section id="home" class="hidden md:block min-h-screen flex items-center pt-16 relative overflow-hidden">
         <!-- 全屏视频背景 -->
         <div class="absolute inset-0">
-            <video 
+            <video preload="metadata" 
                 autoplay 
                 muted 
                 loop 
@@ -365,7 +364,7 @@
                 </div>
                 <div class="order-1 md:order-2">
                     <div class="relative rounded-2xl overflow-hidden shadow-xl">
-                        <img src="images/工厂新门口.png" alt="工厂门口" class="w-full h-80 object-cover">
+                        <img src="images/工厂新门口.jpg" alt="工厂门口" class="w-full h-80 object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent"></div>
                         <div class="absolute bottom-6 left-6 right-6 text-white">
                             <div class="text-base md:text-4xl font-bold leading-tight">专业环氧树脂制造商</div>
