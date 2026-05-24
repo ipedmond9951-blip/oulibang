@@ -215,14 +215,12 @@
                 </div>
 
                 <!-- 语言切换 -->
-                <a href="en/index.html" class="text-sm text-gray-500 hover:text-blue-800 font-medium ml-4 border border-gray-300 rounded px-2 py-1">EN</a>
-
-                <!-- 移动端菜单按钮 -->
                 <button id="menuBtn" class="md:hidden p-2 text-gray-800">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
+                <a href="en/index.html" class="text-sm text-gray-500 hover:text-blue-800 font-medium ml-2 border border-gray-300 rounded px-2 py-1">EN</a>
             </div>
         </div>
 
@@ -270,7 +268,7 @@
     <!-- 移动端：视频和文字一起固定在导航栏下方，滚动时始终可见 -->
     <div class="md:hidden">
         <!-- 视频+文字区域：固定在导航栏下方，z-40 -->
-        <div class="fixed top-20 left-0 w-full z-40">
+        <div class="relative w-full">
             <!-- 视频层 -->
             <div class="relative w-full" style="padding-bottom: 56.25%;">
                 <video preload="metadata" 
@@ -303,8 +301,7 @@
                 </div>
             </div>
         </div>
-        <!-- 占位：导航栏(5rem) + 视频高度(56.25vw) -->
-        <div style="padding-top: calc(5rem + 56.25vw);"></div>
+
     </div>
 
     <!-- ========== 桌面端全屏视频区域 ========== -->
