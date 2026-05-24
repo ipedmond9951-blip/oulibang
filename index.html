@@ -264,36 +264,28 @@
     </nav>
 
     <!-- Hero 横幅区 - 视频背景 -->
-    <section id="video" id="home" class="relative overflow-hidden">
-        <!-- 固定视频区域 - 移动端缩小并固定 -->
-        <div class="fixed top-0 left-0 w-full z-50 bg-black">
-            <div class="relative" style="padding-bottom: 56.25%; height: 0;">
-                <video 
-                    autoplay 
-                    muted 
-                    loop 
-                    playsinline 
-                    class="absolute top-0 left-0 w-full h-full object-cover"
-                    style="height: 100%; width: 100%;"
-                >
-                    <source src="videos/company_intro.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
+    <section id="home" class="min-h-screen flex items-center pt-16 md:pt-20 relative overflow-hidden">
+        <!-- 全屏视频背景 -->
+        <div class="absolute inset-0">
+            <video 
+                autoplay 
+                muted 
+                loop 
+                playsinline 
+                class="w-full h-full object-cover"
+                <source src="videos/company_intro.mp4" type="video/mp4">
+            </video>
 
-        <!-- 占位 spacer for initial content -->
-        <div class="h-[56.25vw] max-h-[50vh] min-h-[20vh] md:min-h-[50vh]"></div>
-        
-        <!-- 内容区 - 在视频下方滚动 -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 py-8">
-            <!-- 顶部标签 -->
-            <div class="text-center mb-8">
-            </div>
+        </div>
         
         <!-- 内容区 -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 py-12">
             <!-- 顶部标签 -->
             <div class="text-center mb-8">
+                <span class="inline-flex items-center gap-2 bg-blue-600/90 backdrop-blur-sm rounded-full px-6 py-2 border border-blue-400/30 shadow-lg">
+                    <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <span class="text-white text-sm font-medium">ISO认证</span>
+                </span>
             </div>
             
             <!-- 主标题 -->
@@ -364,7 +356,7 @@
                         <img src="images/工厂新门口.png" alt="工厂门口" class="w-full h-80 object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent"></div>
                         <div class="absolute bottom-6 left-6 right-6 text-white">
-                            <div class="text-4xl font-bold">专业环氧树脂制造商</div>
+                            <div class="text-4xl font-bold">专业环氧树脂制作商</div>
                         </div>
                     </div>
                 </div>
