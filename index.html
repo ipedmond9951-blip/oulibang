@@ -216,7 +216,7 @@
                 </div>
 
                 <!-- 移动端菜单按钮 -->
-                <button id="menuBtn" class="md:hidden p-2 text-white">
+                <button id="menuBtn" class="md:hidden p-2 text-gray-800">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -263,20 +263,22 @@
         </div>
     </nav>
 
-    <!-- ========== 移动端视频区域 ========== -->
-    <!-- 移动端：视频直接放在页面流中，16:9宽度自适应，白色背景 -->
-    <div class="md:hidden bg-white pt-20">
-        <div class="w-full relative" style="padding-bottom: 56.25%;">
-            <video 
-                autoplay 
-                muted 
-                loop 
-                playsinline 
-                class="w-full h-full object-cover"
-                style="position: absolute; top: 0; left: 0;"
-            >
-                <source src="videos/company_intro.mp4" type="video/mp4">
-            </video>
+    <!-- ========== 移动端固定视频区域 ========== -->
+    <!-- 移动端：视频+导航栏固定，滚动时始终可见 -->
+    <div class="md:hidden">
+        <!-- 视频：固定在导航栏下方，z-40 -->
+        <div class="fixed top-20 left-0 w-full z-40">
+            <div class="relative w-full" style="padding-bottom: 56.25%;">
+                <video 
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline 
+                    class="absolute top-0 left-0 w-full h-full object-cover"
+                >
+                    <source src="videos/company_intro.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
     </div>
 
@@ -415,7 +417,7 @@
                             <img src="images/products/optimized/epoxy-E12-604.jpg" alt="环氧树脂E-12（604）" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                             <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
-                                <span class="bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-medium">主打</span>
+                                <span class="bg-red-500 text-white text-xs px-3 py-1 rounded-full font-medium">热销</span>
                                 <span class="text-white/80 text-sm">E-12 / 604</span>
                             </div>
                         </div>
@@ -435,7 +437,7 @@
                             <img src="images/products/optimized/epoxy-E12-alt2.jpg" alt="环氧树脂E-12（604）备选" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                             <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
-                                <span class="bg-gray-600 text-white text-xs px-3 py-1 rounded-full font-medium">备选</span>
+                                <span class="bg-red-500 text-white text-xs px-3 py-1 rounded-full font-medium">热销</span>
                                 <span class="text-white/80 text-sm">E-12 / 604</span>
                             </div>
                         </div>
