@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# 站点地图
+Sitemap: https://oulibang.com/sitemap.xml
+
+# 禁止爬取常见资源
+Disallow: /api/
+Disallow: /*.json$
+
+# 爬取延迟（建议礼貌爬取）
+Crawl-delay: 1
