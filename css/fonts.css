@@ -1,0 +1,53 @@
+/* ==========================================================================
+   oulibang.com 国内访问优化样式表
+   ==========================================================================
+   优化目标：
+   1. 移除 Google Fonts 依赖（国内访问 200-500ms 慢）
+   2. 使用系统字体栈（PingFang SC / Microsoft YaHei）
+   3. 字重通过 font-weight CSS 属性切换
+   4. 加载更快，首屏文字立即显示
+   ========================================================================== */
+
+/* 中文站 - 系统字体优先（覆盖原 Google Fonts Noto Sans SC） */
+body, html {
+  font-family:
+    -apple-system,                  /* iOS/macOS 系统字体 */
+    BlinkMacSystemFont,             /* Chrome on macOS */
+    "PingFang SC",                  /* macOS/iOS 中文 */
+    "Hiragino Sans GB",             /* macOS 旧版中文 */
+    "Microsoft YaHei",              /* Windows 中文 */
+    "微软雅黑",
+    "WenQuanYi Micro Hei",          /* Linux 中文 */
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 英文站 - 也用系统字体（San Francisco/Segoe UI 已足够） */
+html[lang="en"] body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif !important;
+}
+
+/* 数字 / 英文段落优先用等宽数字（更专业） */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* 防止字体加载导致布局抖动 */
+.font-fallback {
+  font-display: swap;
+}

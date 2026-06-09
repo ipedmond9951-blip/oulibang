@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="山东欧利邦新材料有限公司专业生产环氧树脂（E-12/604, E-20/601, E-03/609）、固化剂及助剂，年产能2万吨，产品远销全球20+国家。ISO 9001认证工厂，支持OEM定制。">
     <meta name="keywords" content="环氧树脂, 环氧树脂E-12, 环氧树脂E-20, 环氧树脂E-03, 固化剂, 山东环氧树脂厂家, 涂料原料, 工业涂料">
     <link rel="canonical" href="https://oulibang.com/">
@@ -12,11 +9,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="128x128" href="/apple-touch-icon.png">
     <title>山东欧利邦新材料有限公司 - 环氧树脂 E-12/604 E-20/601 E-03/609</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preload" href="css/tailwind.min.css" as="style">
+    <link rel="preload" href="images/logo.webp" as="image" type="image/webp">
+    <link rel="dns-prefetch" href="//vjs.zencdn.net">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://vjs.zencdn.net" crossorigin>
+    <link rel="stylesheet" href="css/tailwind.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
         body {
-            font-family: 'Noto Sans SC', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Helvetica, Arial, sans-serif;
         }
         .hero-bg {
             background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 50%, #1e3a5f 100%);
@@ -178,7 +179,10 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <img src="images/logo.png" alt="欧利邦新材料Logo" class="h-12 w-auto">
+                    <picture>
+                        <source srcset="images/logo.webp" type="image/webp">
+                        <img src="images/logo.png" alt="欧利邦新材料Logo" class="h-12 w-auto" loading="eager" decoding="async">
+                    </picture>
                     <span class="ml-3 text-xl font-bold text-gray-800 hidden sm:block">山东欧利邦新材料</span>
                 </div>
 
@@ -276,13 +280,15 @@
         <div class="relative w-full">
             <!-- 视频层 -->
             <div class="relative w-full" style="padding-bottom: 56.25%;">
-                <video preload="metadata" 
-                    autoplay 
-                    muted 
-                    loop 
-                    playsinline 
+                <video preload="none"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    poster="videos/poster.jpg"
                     class="absolute top-0 left-0 w-full h-full object-cover"
                 >
+                    <source src="videos/company_intro_mobile.mp4" type="video/mp4" media="(max-width: 767px)">
                     <source src="videos/company_intro.mp4" type="video/mp4">
                 </video>
             </div>
@@ -313,11 +319,12 @@
     <section id="home" class="hidden md:block min-h-screen flex items-center pt-16 relative overflow-hidden">
         <!-- 全屏视频背景 -->
         <div class="absolute inset-0">
-            <video preload="metadata" 
-                autoplay 
-                muted 
-                loop 
-                playsinline 
+            <video preload="none"
+                autoplay
+                muted
+                loop
+                playsinline
+                poster="videos/poster.jpg"
                 class="w-full h-full object-cover"
             >
                 <source src="videos/company_intro.mp4" type="video/mp4">
@@ -392,7 +399,10 @@
                 </div>
                 <div class="order-1 md:order-2">
                     <div class="relative rounded-2xl overflow-hidden shadow-xl">
-                        <img src="images/new_factory.jpg" alt="工厂门口" class="w-full h-80 object-cover">
+                        <picture>
+                            <source srcset="images/new_factory.webp" type="image/webp">
+                            <img src="images/new_factory.jpg" alt="工厂门口" class="w-full h-80 object-cover" loading="lazy" decoding="async">
+                        </picture>
                         <div class="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent"></div>
                         <div class="absolute bottom-6 left-6 right-6 text-white">
                             <div class="text-base md:text-4xl font-bold leading-tight">专业环氧树脂制造商</div>
@@ -501,7 +511,10 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-gray-50 rounded-xl overflow-hidden card-hover">
                     <div class="h-48 relative overflow-hidden">
-                        <img src="images/news-factory-production.jpg" alt="自动化生产线" class="w-full h-full object-cover">
+                        <picture>
+                            <source srcset="images/news-factory-production.webp" type="image/webp">
+                            <img src="images/news-factory-production.jpg" alt="自动化生产线" class="w-full h-full object-cover" loading="lazy" decoding="async">
+                        </picture>
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     </div>
                     <div class="p-6">
@@ -514,7 +527,10 @@
 
                 <div class="bg-gray-50 rounded-xl overflow-hidden card-hover">
                     <div class="h-48 relative overflow-hidden">
-                        <img src="images/news-lab-research.jpg" alt="高新技术企业认证" class="w-full h-full object-cover">
+                        <picture>
+                            <source srcset="images/news-lab-research.webp" type="image/webp">
+                            <img src="images/news-lab-research.jpg" alt="高新技术企业认证" class="w-full h-full object-cover" loading="lazy" decoding="async">
+                        </picture>
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     </div>
                     <div class="p-6">
@@ -527,7 +543,10 @@
 
                 <div class="bg-gray-50 rounded-xl overflow-hidden card-hover">
                     <div class="h-48 relative overflow-hidden">
-                        <img src="images/news-exhibition.jpg" alt="行业研讨会" class="w-full h-full object-cover">
+                        <picture>
+                            <source srcset="images/news-exhibition.webp" type="image/webp">
+                            <img src="images/news-exhibition.jpg" alt="行业研讨会" class="w-full h-full object-cover" loading="lazy" decoding="async">
+                        </picture>
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     </div>
                     <div class="p-6">
@@ -638,7 +657,10 @@
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <div class="flex items-center mb-4">
-                        <img src="images/logo.png" alt="欧利邦新材料" class="h-10 w-auto">
+                        <picture>
+                            <source srcset="images/logo.webp" type="image/webp">
+                            <img src="images/logo.png" alt="欧利邦新材料" class="h-10 w-auto" loading="lazy" decoding="async">
+                        </picture>
                         <span class="ml-3 text-lg font-bold text-white">山东欧利邦新材料</span>
                     </div>
                     <p class="text-sm">专业生产环氧树脂系列产品，为客户提供优质的产品和服务。</p>

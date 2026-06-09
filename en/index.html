@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Shandong Olibang New Materials - Professional manufacturer of Epoxy Resin (E-12/604, E-20/601, E-03/609), hardeners, and additives. 20,000 tons annual capacity, exporting to 20+ countries. ISO 9001 certified. OEM available.">
     <meta name="keywords" content="epoxy resin, epoxy resin E-12, epoxy resin E-20, epoxy resin E-03, hardener, China epoxy resin manufacturer, coating raw materials, industrial coatings">
     <link rel="canonical" href="https://oulibang.com/en/">
@@ -12,11 +9,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="128x128" href="../apple-touch-icon.png">
     <title>Epoxy Resin E-12/604, E-20/601, E-03/609 - Shandong Olibang Manufacturer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preload" href="../css/tailwind.min.css" as="style">
+    <link rel="preload" href="../images/logo.webp" as="image" type="image/webp">
+    <link rel="dns-prefetch" href="//vjs.zencdn.net">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://vjs.zencdn.net" crossorigin>
+    <link rel="stylesheet" href="../css/tailwind.min.css">
     <link rel="alternate" hreflang="zh-CN" href="../index.html">
     <link rel="alternate" hreflang="en" href="index.html">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
         body {
             font-family: 'Roboto', 'Noto Sans SC', sans-serif;
         }
@@ -285,13 +286,15 @@
         <div class="relative w-full">
             <!-- Video Layer -->
             <div class="relative w-full" style="padding-bottom: 56.25%;">
-                <video preload="metadata" 
-                    autoplay 
-                    muted 
-                    loop 
-                    playsinline 
+                <video preload="none"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    poster="../videos/poster.jpg"
                     class="absolute top-0 left-0 w-full h-full object-cover"
                 >
+                    <source src="../videos/company_intro_mobile.mp4" type="video/mp4" media="(max-width: 767px)">
                     <source src="../videos/company_intro.mp4" type="video/mp4">
                 </video>
             </div>
@@ -323,11 +326,12 @@
     <section id="home" class="hidden md:block min-h-screen flex items-center pt-16 relative overflow-hidden">
         <!-- Full-screen Video Background -->
         <div class="absolute inset-0">
-            <video preload="metadata" 
-                autoplay 
-                muted 
-                loop 
-                playsinline 
+            <video preload="none"
+                autoplay
+                muted
+                loop
+                playsinline
+                poster="../videos/poster.jpg"
                 class="w-full h-full object-cover"
             >
                 <source src="../videos/company_intro.mp4" type="video/mp4">
