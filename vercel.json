@@ -2,5 +2,18 @@
   "version": 2,
   "public": true,
   "framework": null,
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.oulibang.com"
+        }
+      ],
+      "destination": "https://oulibang.com/$1",
+      "statusCode": 301
+    }
+  ]
 }
