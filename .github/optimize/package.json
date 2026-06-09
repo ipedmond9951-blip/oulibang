@@ -1,0 +1,12 @@
+{
+  "name": "oulibang-optimize",
+  "version": "1.0.0",
+  "private": true,
+  "description": "视频转码 + 图片 WebP 转换 + Tailwind CSS 编译（用于 CI/CD）",
+  "scripts": {
+    "tailwind": "tailwindcss -c tailwind.config.js -o ../css/tailwind.min.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

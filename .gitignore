@@ -1,1 +1,7 @@
 .vercel
+# GitHub Actions optimize 中间文件
+.github/optimize/node_modules/
+.github/optimize/package-lock.json
+# macOS
+.DS_Store
+
