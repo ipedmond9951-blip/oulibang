@@ -9,6 +9,7 @@
     <link rel="apple-touch-icon" sizes="128x128" href="/apple-touch-icon.png">
     <title>体系认证 - 山东欧利邦新材料有限公司</title>
     <meta name="description" content="山东欧利邦新材料有限公司已通过ISO9001质量管理体系、ISO14001环境管理体系认证，产品符合国家和行业标准。">
+    <meta name="keywords" content="环氧树脂, 山东欧利邦新材料, 化工原料, 山东环氧树脂厂家">
         <link rel="preload" href="css/tailwind.min.css" as="style">
     <link rel="preload" href="images/logo.webp" as="image" type="image/webp">
     <link rel="dns-prefetch" href="//vjs.zencdn.net">
@@ -25,7 +26,66 @@
             background: #f3f4f6;
         }
         body { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Helvetica, Arial, sans-serif; }
-    </style>
+    
+        /* 浮动联系按钮 */
+        .float-contact {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 40;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .float-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #2d5a87 100%);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 30px 0 0 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .float-contact-item:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+            background: linear-gradient(135deg, #2d5a87 0%, #3a6ea5 100%);
+        }
+        .float-contact-item svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+        @media (max-width: 768px) {
+            .float-contact {
+                top: auto;
+                bottom: 80px;
+                right: 0;
+                transform: none;
+            }
+            .float-contact-item {
+                padding: 10px 14px;
+                font-size: 12px;
+            }
+            .float-contact-item span {
+                display: none;
+            }
+        }
+        /* 移动端菜单 */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+</style>
 </head>
 <body class="bg-gray-50">
 
@@ -49,9 +109,52 @@
                     <a href="news.html" class="text-gray-700 hover:text-blue-900 font-medium">新闻资讯</a>
                     <a href="contact.html" class="text-gray-700 hover:text-blue-900 font-medium">联系我们</a>
                 </div>
+                <button id="menuBtn" class="md:hidden p-2 text-gray-800" aria-label="打开菜单">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
         </div>
     </nav>
+        <!-- 移动端菜单 -->
+        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-white z-50 md:hidden">
+            <div class="flex justify-between items-center p-4 border-b">
+                <span class="text-xl font-bold text-gray-800">菜单</span>
+                <button id="closeMenuBtn" class="p-2" aria-label="关闭菜单">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-col p-4 space-y-2">
+                <a href="en/index.html" class="text-lg text-blue-800 font-bold py-3 border-b">🌐 English</a>
+                <a href="index.html" class="text-lg text-gray-700 hover:text-blue-900 font-medium py-3 border-b">首页</a>
+
+                <!-- 移动端二级菜单：关于我们 -->
+                <div class="border-b pb-2">
+                    <div class="text-lg text-gray-500 py-2">关于我们</div>
+                    <div class="pl-4 space-y-2">
+                        <a href="about.html" class="block text-gray-600 py-2">- 公司简介</a>
+                        <a href="culture.html" class="block text-gray-600 py-2">- 企业文化</a>
+                        <a href="photos.html" class="block text-gray-600 py-2">- 厂容厂貌</a>
+                        <a href="certificates.html" class="block text-gray-600 py-2">- 荣誉资质</a>
+                    </div>
+                </div>
+
+                <!-- 移动端二级菜单：产品中心 -->
+                <div class="border-b pb-2">
+                    <div class="text-lg text-gray-500 py-2">产品中心</div>
+                    <div class="pl-4 space-y-2">
+                        <a href="product-list.html" class="block text-gray-600 py-2">- 环氧树脂系列</a>
+                    </div>
+                </div>
+
+                <a href="news.html" class="text-lg text-gray-700 hover:text-blue-900 font-medium py-3 border-b">新闻资讯</a>
+                <a href="contact.html" class="text-lg text-gray-700 hover:text-blue-900 font-medium py-3 border-b">联系我们</a>
+            </div>
+        </div>
+
 
         </div>
 
@@ -300,5 +403,71 @@
         }
     </style>
 
+
+    <!-- 浮动联系按钮 -->
+    <div class="float-contact">
+        <button id="backToTop" class="float-contact-item !hidden" aria-label="返回顶部">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+            </svg>
+            <span>顶部</span>
+        </button>
+        <a href="tel:13606367656" class="float-contact-item">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            <span>内贸</span>
+        </a>
+        <a href="tel:13606367609" class="float-contact-item">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            <span>外贸</span>
+        </a>
+        <a href="mailto:13606367609@163.com" class="float-contact-item">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            <span>邮件</span>
+        </a>
+    </div>
+
+    <script>
+        // 移动端菜单控制
+        (function() {
+            const menuBtn = document.getElementById('menuBtn');
+            const closeMenuBtn = document.getElementById('closeMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (!menuBtn || !mobileMenu) return;
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            menuBtn.addEventListener('click', () => mobileMenu.classList.add('active'));
+            closeMenuBtn.addEventListener('click', () => mobileMenu.classList.remove('active'));
+            mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('active')));
+        })();
+
+        // 返回顶部按钮
+        (function() {
+            const backToTop = document.getElementById('backToTop');
+            if (!backToTop) return;
+            backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) backToTop.classList.remove('!hidden');
+                else backToTop.classList.add('!hidden');
+            });
+        })();
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#' || href.length < 2) return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
